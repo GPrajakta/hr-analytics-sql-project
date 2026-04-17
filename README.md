@@ -53,13 +53,22 @@ The dataset contains the following tables:
 * Employees at flight risk(5+ years, no promotion)
 
 ###  Salary Analysis
+* Salary analysis by department
+* Gender pay gap by department
+* Top 10% earners
+* Salary growth over time
 
 ###  Tenure & Promotion Analysis
+* Average time to first promotion
+* Tenure distribution bands(current staff)
 
 ###  Management Analysis
+* Manager span of control
+* Manager vs team pay ratio
 
 ### Hiring Trends Analysis
-
+* Monthly hiring Trend
+* New hike salary vs existing staff benchmark
 ###  Business Questions Solved
 
 * Which department has the highest salary expense?
