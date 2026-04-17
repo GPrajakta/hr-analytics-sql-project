@@ -40,24 +40,25 @@ The dataset contains the following tables:
 
 ##  Key Analysis Performed
 
-###  Basic Analysis
+###  Workforce Analysis
 
 * Employee count by department
 * Gender distribution
-* Hiring trends
+* workforce age distribution
 
-###  Intermediate Analysis
+###  Attrition Analysis
 
-* Average salary by department
-* Top-paid employees
-* Department-wise employee growth
+* Annual attrition rate by department
+* Average tenure at exit
+* Employees at flight risk(5+ years, no promotion)
 
-###  Advanced Analysis
+###  Salary Analysis
 
-* Window functions (RANK, DENSE_RANK)
-* Running totals and cumulative analysis
-* Z-score salary analysis
-* Employee retention trends
+###  Tenure & Promotion Analysis
+
+###  Management Analysis
+
+### Hiring Trends Analysis
 
 ###  Business Questions Solved
 
