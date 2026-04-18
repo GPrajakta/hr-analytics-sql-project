@@ -26,6 +26,11 @@ The analysis covers the full analytics pipeline:
 
 ```
 hr-analytics-portfolio/
+├── docs/
+│   ├── schema.md                    ← Database schema & table relationships
+│   ├── data_dictionary.md           ← Column definitions & business rules
+│   ├── business_questions.md        ← 18 questions this project answers
+│   └── key_findings.md              ← Summary of insights discovered
 │
 ├── README.md                        ← You are here
 │
@@ -57,12 +62,6 @@ hr-analytics-portfolio/
 │   └── 06_hiring/
 │       ├── monthly_hiring_trend.sql
 │       └── new_hire_vs_benchmark_salary.sql
-│
-├── docs/
-│   ├── schema.md                    ← Database schema & table relationships
-│   ├── data_dictionary.md           ← Column definitions & business rules
-│   ├── business_questions.md        ← 18 questions this project answers
-│   └── key_findings.md              ← Summary of insights discovered
 │
 ├── powerbi/
 │   └── HR_Analytics_Dashboard.pbix  ← Power BI report file
