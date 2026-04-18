@@ -26,6 +26,14 @@ The analysis covers the full analytics pipeline:
 
 ```
 hr-analytics-portfolio/
+├── data/
+│   ├── departments.csv
+│   ├── dept_emp.csv
+│   ├── dept_manager.csv
+│   ├── employees.csv
+│   ├── salaries.csv
+│   ├── titles.csv
+
 ├── docs/
 │   ├── schema.md                    ← Database schema & table relationships
 │   ├── data_dictionary.md           ← Column definitions & business rules
@@ -70,8 +78,7 @@ hr-analytics-portfolio/
 │   ├── schema_diagram.png           ← ERD screenshot
 │   └── dashboard_preview.png        ← Dashboard screenshot
 │
-└── data/
-    └── README.md                    ← Instructions to load sample database
+                
 ```
 
 ---
