@@ -108,10 +108,10 @@ hr-analytics-portfolio/
 | 4 | Attrition | Which departments lose the most people? | [annual_attrition_rate.sql](sql/02_attrition/annual_attrition_rate.sql) |
 | 5 | Attrition | How long do employees stay before leaving? | [avg_tenure_at_exit.sql](sql/02_attrition/avg_tenure_at_exit.sql) |
 | 6 | Attrition | Who is at risk of leaving soon? | [flight_risk_employees.sql](sql/02_attrition/flight_risk_employees.sql) |
-| 7 | Salary | Which departments pay the most? | [salary_by_department.sql](sql/03_salary/salary_by_department.sql) |
-| 8 | Salary | Is there a gender pay gap? | [gender_pay_gap.sql](sql/03_salary/gender_pay_gap.sql) |
-| 9 | Salary | Who are the top 10% earners? | [top_earners.sql](sql/03_salary/top_earners.sql) |
-| 10 | Salary | Are salaries growing year-over-year? | [salary_yoy_growth.sql](sql/03_salary/salary_yoy_growth.sql) |
+| 7 | Salary | Which departments pay the most? | [salary_by_department.sql](sql/02_salary/salary_by_department.sql) |
+| 8 | Salary | Is there a gender pay gap? | [gender_pay_gap.sql](sql/02_salary/gender_pay_gap.sql) |
+| 9 | Salary | Who are the top 10% earners? | [top_earners.sql](sql/02_salary/top_earners.sql) |
+| 10 | Salary | Are salaries growing year-over-year? | [salary_yoy_growth.sql](sql/02_salary/salary_yoy_growth.sql) |
 | 11 | Tenure | How long before employees get promoted? | [time_to_first_promotion.sql](sql/04_tenure/time_to_first_promotion.sql) |
 | 12 | Tenure | What is the experience profile of current staff? | [tenure_distribution.sql](sql/04_tenure/tenure_distribution.sql) |
 | 13 | Management | What is each manager's span of control? | [manager_span_of_control.sql](sql/05_management/manager_span_of_control.sql) |
