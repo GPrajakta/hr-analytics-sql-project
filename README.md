@@ -102,9 +102,9 @@ hr-analytics-portfolio/
 
 | # | Category | Question | SQL File |
 |---|----------|----------|----------|
-| 1 | Workforce | Which departments are largest? | [headcount_by_dept.sql](sql/01_workforce/headcount_by_dept.sql) |
-| 2 | Workforce | Is there a gender imbalance by department? | [gender_distribution.sql](sql/01_workforce/gender_distribution.sql) |
-| 3 | Workforce | What is the age profile of our workforce? | [age_distribution.sql](sql/01_workforce/age_distribution.sql) |
+| 1 | Workforce | Which departments are largest? | [headcount_by_dept.sql](sql/workforce/headcount_by_dept.sql) |
+| 2 | Workforce | Is there a gender imbalance by department? | [gender_distribution.sql](sql/workforce/gender_distribution.sql) |
+| 3 | Workforce | What is the age profile of our workforce? | [age_distribution.sql](sql/workforce/age_distribution.sql) |
 | 4 | Attrition | Which departments lose the most people? | [annual_attrition_rate.sql](sql/02_attrition/annual_attrition_rate.sql) |
 | 5 | Attrition | How long do employees stay before leaving? | [avg_tenure_at_exit.sql](sql/02_attrition/avg_tenure_at_exit.sql) |
 | 6 | Attrition | Who is at risk of leaving soon? | [flight_risk_employees.sql](sql/02_attrition/flight_risk_employees.sql) |
