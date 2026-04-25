@@ -181,7 +181,7 @@ mysql -u root -p employees < sql/01_workforce/headcount_by_dept.sql
 
 Built as part of a career transition into data analytics, this project demonstrates end-to-end analytics capability on a real, large-scale HR dataset. The focus is not just on writing queries — but on answering questions a real HR or business stakeholder would actually ask.
 
-**Connect:** [LinkedIn](https://linkedin.com/in/yourprofile) | [Email](mailto:youremail@gmail.com)
+**Connect:** [LinkedIn](https://www.linkedin.com/in/prajakta-gitte-a62183a7/) | [Email](parijatak43@gmail.com)
 
 ---
 
