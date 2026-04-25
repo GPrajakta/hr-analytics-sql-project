@@ -1,10 +1,5 @@
 # 👥 HR Analytics — End-to-End SQL & Power BI Portfolio
 
-![SQL](https://img.shields.io/badge/SQL-MySQL-blue?logo=mysql)
-![PowerBI](https://img.shields.io/badge/Power_BI-Dashboard-yellow?logo=powerbi)
-![Excel](https://img.shields.io/badge/Excel-Analysis-green?logo=microsoftexcel)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-
 > **Business Question:** Can we use workforce data to predict attrition, identify pay inequities, and improve retention — before problems become expensive?
 
 ---
