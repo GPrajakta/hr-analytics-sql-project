@@ -6,7 +6,7 @@
 
 ## 📌 Project Overview
 
-This project performs a comprehensive analysis of the **MySQL Employees Sample Database** (~300,000 employee records spanning 1985–2000) to surface actionable HR insights across six business dimensions.
+This project performs a comprehensive analysis of the **MySQL Employees Sample Database** (49549 employee records spanning 1985–2000) to surface actionable HR insights across six business dimensions.
 
 The analysis covers the full analytics pipeline:
 - Raw SQL queries → cleaned datasets → Power BI dashboards → business recommendations
