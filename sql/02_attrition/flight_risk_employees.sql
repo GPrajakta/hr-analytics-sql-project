@@ -13,14 +13,23 @@ WITH employee_profile AS (
         e.last_name,
         e.gender,
         e.hire_date,
-        ROUND(DATEDIFF(CURDATE(), e.hire_date) / 365.25, 1)  AS tenure_years,
-        COUNT(DISTINCT t.title)                                AS distinct_titles,
-        MAX(s.salary)                                          AS current_salary
+        --------faster tenure calculation -------
+        ROUND(
+            EXTRACT(YEAR FROM AGE(CURRENT_DATE, e.hire_date)), 1
+        ) AS tenure_years,
+        COUNT(DISTINCT t.title) AS distinct_titles,
+        s.salary AS current_salary
     FROM employees e
-    JOIN titles t    ON e.emp_no = t.emp_no
-    JOIN salaries s  ON e.emp_no = s.emp_no AND s.to_date = '9999-01-01'
-    JOIN dept_emp de ON e.emp_no = de.emp_no AND de.to_date = '9999-01-01'
-    GROUP BY e.emp_no, e.first_name, e.last_name, e.gender, e.hire_date
+    ------------ only current salary (reduces rows early)-------------
+    JOIN salaries s  
+        ON e.emp_no = s.emp_no 
+       AND s.to_date = '9999-01-01'
+    --------------- keep titles (needed for promotion logic) --------------
+    JOIN titles t    
+        ON e.emp_no = t.emp_no
+    GROUP BY 
+        e.emp_no, e.first_name, e.last_name, 
+        e.gender, e.hire_date, s.salary
 )
 SELECT 
     ep.emp_no,
@@ -28,19 +37,24 @@ SELECT
     ep.last_name,
     ep.gender,
     ep.tenure_years,
-    ep.distinct_titles      AS titles_held,
+    ep.distinct_titles AS titles_held,
     ep.current_salary,
     d.dept_name,
-    -- Risk label based on how many criteria are met
     CASE
         WHEN ep.tenure_years >= 8 THEN 'HIGH RISK'
         WHEN ep.tenure_years >= 5 THEN 'MEDIUM RISK'
+        WHEN ep.tenure_years >= 3 THEN 'LOW RISK'
     END AS flight_risk_level
 FROM employee_profile ep
-JOIN dept_emp de ON ep.emp_no = de.emp_no AND de.to_date = '9999-01-01'
-JOIN departments d ON de.dept_no = d.dept_no
+------------------ join department ONLY once here-------------
+JOIN dept_emp de 
+    ON ep.emp_no = de.emp_no 
+   AND de.to_date = '9999-01-01'
+JOIN departments d 
+    ON de.dept_no = d.dept_no
+---------filter early------------------------
 WHERE ep.tenure_years >= 5
-  AND ep.distinct_titles = 1    -- never promoted (only ever had 1 title)
+  AND ep.distinct_titles = 1
 ORDER BY ep.tenure_years DESC;
 
 -- Expected Output Columns: emp_no | first_name | last_name | gender | tenure_years | titles_held | current_salary | dept_name | flight_risk_level
