@@ -7,14 +7,14 @@
 
 SELECT 
     d.dept_name,
-    ROUND(AVG(DATEDIFF(de.to_date, e.hire_date) / 365.25), 1) AS avg_tenure_years,
-    MIN(ROUND(DATEDIFF(de.to_date, e.hire_date) / 365.25, 1)) AS min_tenure_years,
-    MAX(ROUND(DATEDIFF(de.to_date, e.hire_date) / 365.25, 1)) AS max_tenure_years,
+    ROUND(AVG((de.to_date - e.hire_date) / 365.25), 1) AS avg_tenure_years,
+    MIN(ROUND((de.to_date - e.hire_date) / 365.25, 1)) AS min_tenure_years,
+    MAX(ROUND((de.to_date - e.hire_date) / 365.25, 1)) AS max_tenure_years,
     COUNT(*) AS total_exits
 FROM employees e
 JOIN dept_emp de ON e.emp_no = de.emp_no
 JOIN departments d ON de.dept_no = d.dept_no
-WHERE de.to_date != '9999-01-01'   -- only employees who have left
+WHERE de.to_date <> DATE '9999-01-01'
 GROUP BY d.dept_name
 ORDER BY avg_tenure_years ASC;
 
